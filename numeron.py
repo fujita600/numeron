@@ -72,8 +72,20 @@ class NumerOn:
     def isStrUnique(s: str)->bool:
         s_len = len(s)
 
-        for i range(0, s_len, 1):
-            for j range(i + 1, s_len, 1):
+        for i in range(0, s_len, 1):
+            for j in range(i + 1, s_len, 1):
                 if s[i] == s[j]:
                     return False
         return True
+
+    # 答えの可能性を配列で返すモジュール
+    @staticmethod
+    def forecast(request: list, hit: int, blow: int):
+        """
+        @params request -> 予測値
+        @params hit -> 予測値のヒットの数
+        @params blow -> 予測値のブローの数
+        """
+        result = []     # 戻り値
+        
+
